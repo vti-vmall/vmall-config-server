@@ -1,0 +1,2 @@
+VMALL_MALL_SERVICE_URI: lb://vmall-mall-service
+VMALL_USER_MANAGER_URI: lb://vmall-user-manager

@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: vmall-mall-service
+          uri: ${VMALL_MALL_SERVICE_URI}
+          predicates:
+            - Path=/mall/**
+          filters:
+            - RewritePath=/mall/(?<segment>.*), /$\{segment}
+        - id: vmall-user-manager
+          uri: ${VMALL_USER_MANAGER_URI}
+          predicates:
+            - Path=/user/**
+          filters:
+            - RewritePath=/user/(?<segment>.*), /$\{segment}
