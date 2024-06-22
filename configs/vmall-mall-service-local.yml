@@ -1,3 +1,6 @@
 DB_URL: jdbc:mysql://localhost:3306/vmall_mall
 DB_USERNAME: root
 DB_PASSWORD: root
+
+server:
+  port: 8082

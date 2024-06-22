@@ -7,7 +7,15 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+  rabbitmq:
+    host: ${RABBIT_MQ_HOST}
+    port: ${RABBIT_MQ_PORT}
+    username: ${RABBIT_MQ_USER}
+    password: ${RABBIT_MQ_PASSWORD}
+    virtual-host: ${RABBIT_MQ_VIRTUAL_HOST}
 
-public:
-  urls:
-    - /api/v1/auth/**
+queue:
+  send-email:
+    queue-name: ${QUEUE_SEND_EMAIL_QUEUE_NAME}
+    exchange: ${QUEUE_SEND_EMAIL_EXCHANGE}
+    routing-key: ${QUEUE_SEND_EMAIL_ROUTING_KEY}

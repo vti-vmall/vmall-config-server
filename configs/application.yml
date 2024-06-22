@@ -6,5 +6,5 @@ eureka:
     service-url:
       defaultZone: ${EUREKA_SERVER_URL:http://localhost:8761/eureka}
 jwt:
-  key: ${JWT_KEY:abc}  
+  key: ${JWT_KEY:abc}
 
