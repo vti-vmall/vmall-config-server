@@ -14,3 +14,13 @@ spring:
             - Path=/user/**
           filters:
             - RewritePath=/user/(?<segment>.*), /$\{segment}
+      global-cors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+            allowedHeaders: '*'
