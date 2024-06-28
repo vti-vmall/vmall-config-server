@@ -4,6 +4,11 @@ spring:
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
     driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      #      The maximum time (ms) to spend waiting to get a connection from the pool
+      connection-timeout: 60000
+      #      The maximum number of connections HikariCP will keep in the pool
+      maximum-pool-size: 5
   jpa:
     hibernate:
       ddl-auto: update
